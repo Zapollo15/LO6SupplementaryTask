@@ -47,13 +47,13 @@ public class GridEditor : Editor
 
                 if (e.type == EventType.MouseDown)
                 {
-                    if (e.button == 0) // Left mouse button
+                    if (e.button == 0)
                     {
                         currentPrefabIndex = (currentPrefabIndex + 1) % gridManager.prefabs.Count;
                         gridManager.ReplaceTile(x, y, currentPrefabIndex);
                         e.Use();
                     }
-                    else if (e.button == 1) // Right mouse button
+                    else if (e.button == 1)
                     {
                         currentPrefabIndex = (currentPrefabIndex - 1 + gridManager.prefabs.Count) % gridManager.prefabs.Count;
                         gridManager.ReplaceTile(x, y, currentPrefabIndex);
